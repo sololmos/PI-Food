@@ -1,4 +1,4 @@
-import React from "react";
+
 //import {useState,useEffect} from  'react';
 import {useEffect} from  'react';
 import { useDispatch , useSelector } from "react-redux";
@@ -14,7 +14,7 @@ export default function Home (){
 
     useEffect(()=>{
         dispatch(getRecipes());
-    })
+    },[dispatch])
 
     function handleClick(e){
         e.preventDefault();
@@ -56,11 +56,17 @@ export default function Home (){
                     <option value="whole 30">Whole 30</option>
                 </select> 
 
-                {
-                    allRecipes && allRecipes.map(el=>{
+                {allRecipes?.map((e)=>{
                         return(
-                            <Card name={el.name} img= {el.img} type_diet={el.type_diet}/>
-                             )
+                            <div> 
+                             <fragment>
+                                 <Link to={"/home/" + e.id}>
+                                  <Card name={e.name} img= {e.img} type_diet={e.type_diet} key={e.id} />
+                                 </Link>
+                             </fragment>
+                            </div> 
+                        );
+
                        })
                 }
 
