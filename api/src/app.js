@@ -32,6 +32,5 @@ server.use((err, req, res, next) => { // eslint-disable-line no-unused-vars
   res.status(status).send(message);
 });
 
-//API_KEY=cce81d22300243f59df3c3eb0812c37d
-//API_KEY=0a4f04877cf54d79ad0b60c59824540c
+
 module.exports = server;
