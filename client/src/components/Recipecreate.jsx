@@ -1,13 +1,25 @@
 import React , {useState, useEffect} from 'react';
+// eslint-disable-next-line
 import { Link, useHistory} from 'react-router-dom';
 import {useDispatch , useSelector} from 'react-redux';
 import {postRecipe, getTypeDiets } from '../actions';
 
 
+function validate(input){
+    let errors = {};
+    if(!input.name){
+        errors.name = 'This field is required';
+    }else if(!input.summary){
+        errors.summary = 'This field is required';
+    }
+    return errors;
+};
+
 export default function RecipeCreate(){
     const dispatch = useDispatch()
     //const history= useHistory()
     const diets= useSelector((state)=> state.dietsType)
+    const [errors, setErrors] = useState({});
 
     const[input, setInput] = useState({
         name : "",
@@ -19,7 +31,7 @@ export default function RecipeCreate(){
         healthylevel : 0,
         stepbystep : "",
        
-    })
+    }) 
 
 //---------------------------------------------------------------
     function handleChange(e){
@@ -27,6 +39,11 @@ export default function RecipeCreate(){
             ...input,
             [e.target.name] : e.target.value
         })
+
+        setErrors(validate({
+            ...input,
+            [e.target.name] : e.target.value
+        }))
         console.log(input)
     }
 //---------------------------------------------------------------
@@ -55,12 +72,19 @@ export default function RecipeCreate(){
         })
         //history.push('/home')
     }
+//--------------------------------------------------------------
+    function handleDelete(el){
+        setInput({
+            ...input,
+            type_diet : input.type_diet.filter(t=> t !==el)
 
+        })
+    }
 
 //---------------------------------------------------------------
     useEffect(()=>{
         dispatch(getTypeDiets());
-        
+    // eslint-disable-next-line    
     },[]);
 
     return(
@@ -71,6 +95,9 @@ export default function RecipeCreate(){
                 <div>
                     <label>Name:</label>
                     <input type="text" value={input.name} name='name' onChange={handleChange} />
+                    {errors.name && (
+                        <p>{errors.name}</p>
+                    )}
                 </div>
 
                 <div>
@@ -81,6 +108,9 @@ export default function RecipeCreate(){
                 <div>
                     <label>Summary:</label>
                     <input type="text" value={input.summary} name='summary'  onChange={handleChange}/>
+                    {errors.summary && (
+                        <p>{errors.summary}</p>
+                    )}
                 </div>
 
                 <div>
@@ -116,7 +146,18 @@ export default function RecipeCreate(){
                     {/* <input type="text" value={input.type_diet} name='type_diet' /> */}
 
                 </div>
-                <ul><li>{input.type_diet.map(el=> el + " ,")}</li></ul>
+                {/* <ul><li>{input.type_diet.map(el=> el + " ,")}</li></ul> */}
+
+                {input.type_diet.map(el=>
+                     <div>
+                         <p>{el}</p>
+                         <button onClick={()=>handleDelete(el)}>X</button>
+                     
+                     </div>
+                     
+                     )}
+
+                
 
 
                 <button type='submit'>Create recipe!</button>

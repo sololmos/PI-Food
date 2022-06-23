@@ -3,6 +3,7 @@ const initialState = {
     recipes : [],
     allRecipes : [],
     dietsType : [],
+    detail : [],
     
 }
 
@@ -80,6 +81,13 @@ function rootReducer(state=initialState, action){
                 ...state,
                 dietsType : action.payload
             }
+         //--------------------------------------------------
+            case 'GET_DETAILS' :
+                return{
+                    ...state,
+                    detail : action.payload
+
+                }
          //--------------------------------------------------
          case 'ORDER_BY_SCORE' :
             let orderArray = action.payload === "asc" ? 

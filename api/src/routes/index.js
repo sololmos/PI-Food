@@ -25,9 +25,9 @@ const getApiInfo = async ()=>{
 
 //const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=cce81d22300243f59df3c3eb0812c37d&addRecipeInformation=true&number=100`);
 
-//const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=0a4f04877cf54d79ad0b60c59824540c&addRecipeInformation=true&number=100`);
+const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=0a4f04877cf54d79ad0b60c59824540c&addRecipeInformation=true&number=100`);
 
-const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=decc54ef414f4104bdfef9525fcffc0f&addRecipeInformation=true&number=100`);
+//const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=decc54ef414f4104bdfef9525fcffc0f&addRecipeInformation=true&number=100`);
 
     const apiFood = await apiUrl.data.results.map(el=>{
         return{
@@ -109,11 +109,11 @@ router.get('/types', async (req, res)=>{
     //API_KEY_3=decc54ef414f4104bdfef9525fcffc0f
 
 
-     //const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=cce81d22300243f59df3c3eb0812c37d&addRecipeInformation=true&number=100`);
+     // const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=cce81d22300243f59df3c3eb0812c37d&addRecipeInformation=true&number=100`);
 
-     //const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=0a4f04877cf54d79ad0b60c59824540c&addRecipeInformation=true&number=100`);
+     const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=0a4f04877cf54d79ad0b60c59824540c&addRecipeInformation=true&number=100`);
 
-     const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=decc54ef414f4104bdfef9525fcffc0f&addRecipeInformation=true&number=100`);
+     //const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=decc54ef414f4104bdfef9525fcffc0f&addRecipeInformation=true&number=100`);
   
      const recipesDiet = apiInfo.data.results.map( el => el.diets);
      const dietflat = recipesDiet.flat(Infinity); // aplano los arrays que tenga dentro
