@@ -33,7 +33,7 @@ import axios from 'axios';
     export function searchRecipeByName(name){ // aca podria ponerle name //payload seria lo mismo
         return async function(dispatch){ 
                 try{ 
-                        var json = await axios.get('http://localhost:3002/recipes?name='+ name);//y aca podria devolver el name // aca deuelvo payload q seria lo mismo
+                        var json = await axios.get('http://localhost:3001/recipes?name='+ name);//y aca podria devolver el name // aca deuelvo payload q seria lo mismo
                         
                         return dispatch({
                                 type: 'SEARCH_RECIPE_BY_NAME',
@@ -52,7 +52,7 @@ import axios from 'axios';
         //console.log(payload);
         return{
                 type: 'FILTER_BY_TYPEDIETS',
-                payload
+                payload,
         }
     }
 //--------------------------------------

@@ -25,6 +25,11 @@ function rootReducer(state=initialState, action){
              }
          
          //--------------------------------------------------
+         case 'POST_RECIPE' :
+             return{
+                 ...state,
+             }
+         //--------------------------------------------------
          case 'FILTER_BY_TYPEDIETS' : 
 
             const allRecipes = state.allRecipes
@@ -51,6 +56,25 @@ function rootReducer(state=initialState, action){
             };
             break;
          //--------------------------------------------------
+
+        /*  case 'FILTER_BY_TYPEDIETS' :
+             const diets = state.allRecipes
+             const recipeFiltered = action.payload === 'all'
+              ? diets : 
+             diets.filter(recipe=>{
+                 let names = recipe.type_diet.map(t => t.name)
+                 if(names.includes(action.payload)) return recipe
+                 else return null;
+             })
+             return {
+                 ...state,
+                 recipes : recipeFiltered
+
+             };
+
+             break; */
+
+         //--------------------------------------------------
          case 'GET_TYPEDIETS' : 
             return{
                 ...state,
@@ -58,21 +82,21 @@ function rootReducer(state=initialState, action){
             }
          //--------------------------------------------------
          case 'ORDER_BY_SCORE' :
-            let orderArray = action.payload==="asc" ? 
+            let orderArray = action.payload === "asc" ? 
             state.recipes.sort(function (a,b){
-                    if(a.score > b.score){
+                    if(a.healthylevel > b.healthylevel){
                             return 1;
                     }
-                    if(b.score > a.score){
+                    if(b.healthylevel > a.healthylevel){
                             return -1;
                     }
                     return 0;
             }) : 
             state.recipes.sort(function (a,b){
-                    if(a.score > b.score){
+                    if(a.healthylevel > b.healthylevel){
                             return -1;
                     }
-                    if(b.score > a.score){
+                    if(b.healthylevel > a.healthylevel){
                             return 1;
                     }
                     return 0;

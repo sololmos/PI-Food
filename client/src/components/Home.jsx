@@ -35,7 +35,7 @@ export default function Home (){
     useEffect(()=>{
         dispatch(getRecipes());
     },[dispatch])
-
+//-----------------------------------------------MUESTRO RECETAS
 
     function handleClick(e){
         e.preventDefault();
@@ -55,7 +55,10 @@ export default function Home (){
    }
 //----------------------------------------------(SORT)ORDER BY ALPHA
     function handleorderByAlphabet(e){
+        e.preventDefault();
         dispatch(orderByAlphabet(e.target.value));
+        setCurrentPage(1);
+        setOrden(`Ordenado${e.target.value}`)
     }   
 
 //----------------------------------------------ACA RENDERIZO
@@ -77,7 +80,7 @@ export default function Home (){
 
              {/*-----------------------FILTRO TIPO DE DIETAS----------------- */}
 
-                <select onChange={e=> handlefilterByTypeDiets(e)}>
+                {/* <select onChange={e=> handlefilterByTypeDiets(e)}>
                     <option value= 'all'>filter by type of diet</option>
                     <option value="dairy free">Dairy Free</option>
                     <option value="fodmap friendly">Fodmap Friendly</option>
@@ -88,6 +91,24 @@ export default function Home (){
                     <option value="primal">Primal</option>
                     <option value="vegan">Vegan</option>
                     <option value="whole 30">Whole 30</option>
+                </select>  */}
+
+                <select onChange={e=> handlefilterByTypeDiets(e)}>
+                    <option value= 'all'>filter by type of diet</option>
+                    <option value="gluten free">Gluten free</option>
+                    <option value="ketogenic">ketogenic</option>
+                    <option value="vegetarian">Vegetarian</option>
+                    <option value="lacto-vegetarian">Lacto-vegetarian</option>
+                    <option value="paleo">Paleolithic</option>
+                    <option value="ovo-vegetarian">Ovo-vegetarian</option>
+                    <option value="low fodmap">Low fodmap</option>
+                    <option value="pescetarian" >Pescetarian</option>
+                    <option value="vegan">Vegan</option>
+                    <option value="primal">Primal</option>
+                    <option value="whole 30" >Whole 30</option>
+                    <option value="dairy free">Dairy free</option>
+                    <option value="lacto ovo vegetarian">Lacto ovo vegetarian</option>
+                    <option value="fodmap friendly">Fodmap friendly</option>
                 </select> 
 
              {/*-----------------------ORDER BY SCORE-------------------------- */}
@@ -110,7 +131,7 @@ export default function Home (){
                     paginado={paginado}
                 />
 
-             
+
 
              {/*----------------------------MUESTRO FOTOS------------------------------- */}
                     <span className='pics'>
@@ -118,7 +139,7 @@ export default function Home (){
                         return(
                             <div> 
                                 <Link to={'/home/' + e.id}>
-                                <Card name={e.name} img={e.img} type_diet={e.type_diet} key={e.id} />
+                                <Card name={e.name} img={e.img ? e.img : e.image} type_diet={e.type_diet} key={e.id} />
                                 </Link>
                             </div> 
                                 );

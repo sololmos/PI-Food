@@ -16,7 +16,7 @@ export default function SearchBar(){
 
     function handleSubmit(e){
         e.preventDefault()
-        dispatch(searchRecipeByName(name))
+        dispatch(searchRecipeByName(name))//name lo que esta escribiendo el usuario
     }
 
 
@@ -31,8 +31,7 @@ export default function SearchBar(){
 
              <button 
                 type='submit' 
-                onClick={(e)=>handleSubmit(e)}
-                > Search </button>
+                onClick={(e)=>handleSubmit(e)}> Search </button>
             
         </div>
     )
