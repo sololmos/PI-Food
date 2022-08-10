@@ -31,7 +31,7 @@ module.exports = (sequelize) => {
       type: DataTypes.TEXT,
     },
 
-    image:{
+    img:{
       type: DataTypes.TEXT,
 
     }
