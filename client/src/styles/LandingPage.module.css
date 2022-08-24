@@ -23,11 +23,13 @@
     background-size: cover;
  }
 .container{
-    margin: 0;
+    margin-top: 40px;
+    margin-left: 600px;
+   /*  align-self: center;
     height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 .cssbuttons_io_button {
     text-decoration: none;

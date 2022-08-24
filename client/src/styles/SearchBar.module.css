@@ -1,0 +1,103 @@
+
+.container{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+
+ 
+   /*  background-color: aqua;
+    margin: 0 10px;
+    padding: 30px; */
+    align-items: center;
+    align-self: center;
+}
+
+
+
+.item{
+   
+   align-self: center;
+   display: inline;
+   flex-direction: row;
+   
+
+ }
+
+ .input{
+    border-radius:15px 0px 0px 15px;
+    text-decoration: none;
+    font-size: medium;
+    border: none;
+    height: 40px;
+    width: 300px;
+   
+ }
+
+/*  ----------------------------------------BUTON-------------------- */
+ .cssbuttons_io_button_home {
+    margin-top: 0%;
+     text-decoration: none;
+     cursor: pointer;
+     background: #F9B755;
+     color: white;
+     font-family: inherit; 
+     padding: 0.35em;
+     padding-left: 1.2em;
+     font-size: 15px;
+     font-weight: 500;
+
+     border-radius: 0 0.9em 0.9em 0;
+
+     border: none;
+     letter-spacing: 0.05em;
+     display: flex;
+     align-items: center;
+     box-shadow: inset 0 0 1.6em -0.6em #F9B755; 
+     overflow: hidden;
+     position: relative;
+     height: 2.8em;
+     padding-right: 3.3em;
+     box-shadow: #F9B755; 
+    }
+    
+    .cssbuttons_io_button_home .icon_home {
+     text-decoration: none;
+     background: white;
+     margin-left: 1em;
+     position: absolute;
+     display: flex;
+     align-items: center;
+     justify-content: center;
+     height: 2.2em;
+     width: 2.2em;
+     border-radius: 0.7em;
+     box-shadow: 0.1em 0.1em 0.6em 0.2em #F9B755; 
+     right : 0.3em;
+     transition : all 0.3s;
+    }
+    
+    .cssbuttons_io_button_home:hover .icon_home {
+     text-decoration: none;
+     width: calc(100% - 0.6em);
+    }
+    
+    .cssbuttons_io_button_home .icon_home svg {
+     text-decoration: none;
+     width: 1.1em;
+     transition: transform 0.3s;
+     color: #F9B755;
+    }
+    
+    .cssbuttons_io_button_home:hover .icon_home svg {
+     text-decoration: none;
+     transform: translateX(0.1em);
+    }
+    
+    .cssbuttons_io_button_home:active .icon_home {
+     text-decoration: none;
+     transform: scale(0.95);
+    }
+ 
+    .link_home{
+     text-decoration: none;
+    }

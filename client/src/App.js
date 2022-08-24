@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LandingPage from './components/LandingPage';
 import Home from './components/Home';
 import RecipeCreate from './components/RecipeCreate';
+import Loading from './components/Loading';
 import Detail from './components/Detail';
 
 function App() {
@@ -14,6 +15,8 @@ function App() {
         <Route exact path='/' element={<LandingPage/>} />
         
         <Route exact path='/home' element={<Home/>} />
+
+        <Route exact path='/loading' element={<Loading/>} />
 
         <Route exact path='/recipe' element={<RecipeCreate/>} />
 

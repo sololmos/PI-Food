@@ -23,9 +23,9 @@ const getApiInfo = async ()=>{
 //API_KEY_2=0a4f04877cf54d79ad0b60c59824540c
 //API_KEY_3=decc54ef414f4104bdfef9525fcffc0f
 
-//const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=cce81d22300243f59df3c3eb0812c37d&addRecipeInformation=true&number=100`);
+const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=cce81d22300243f59df3c3eb0812c37d&addRecipeInformation=true&number=100`);
 
-const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=0a4f04877cf54d79ad0b60c59824540c&addRecipeInformation=true&number=100`);
+//const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=0a4f04877cf54d79ad0b60c59824540c&addRecipeInformation=true&number=100`);
 
 //const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=decc54ef414f4104bdfef9525fcffc0f&addRecipeInformation=true&number=100`);
 
@@ -33,7 +33,7 @@ const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearc
         return{
             name : el.title,
             id : el.id,
-            img : el.image, 
+            image: el.image, 
             summary : el.summary,
             type_dish : el.dishTypes,
             type_diet : el.diets,
@@ -109,9 +109,9 @@ router.get('/types', async (req, res)=>{
     //API_KEY_3=decc54ef414f4104bdfef9525fcffc0f
 
 
-     // const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=cce81d22300243f59df3c3eb0812c37d&addRecipeInformation=true&number=100`);
+      const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=cce81d22300243f59df3c3eb0812c37d&addRecipeInformation=true&number=100`);
 
-     const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=0a4f04877cf54d79ad0b60c59824540c&addRecipeInformation=true&number=100`);
+     //const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=0a4f04877cf54d79ad0b60c59824540c&addRecipeInformation=true&number=100`);
 
      //const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=decc54ef414f4104bdfef9525fcffc0f&addRecipeInformation=true&number=100`);
   
@@ -162,7 +162,7 @@ router.post('/recipe', async (req,res)=>{
 
     let { 
         name,
-        img, 
+        image, 
         summary,
         type_dish,
         type_diet,
@@ -175,7 +175,7 @@ router.post('/recipe', async (req,res)=>{
 
     let recipeCreated = await Recipe.create({
         name,
-        img, 
+        image, 
         summary,
         type_dish,
         //type_diet, // no se lo paso por que tngo q hacer la relacion aparte 

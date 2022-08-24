@@ -18,6 +18,7 @@ module.exports = (sequelize) => {
     summary : {
       type: DataTypes.TEXT,
       allowNull : false,
+      
     },
 
     score : {
@@ -31,8 +32,9 @@ module.exports = (sequelize) => {
       type: DataTypes.TEXT,
     },
 
-    img:{
+    image:{
       type: DataTypes.TEXT,
+      allowNull:false,
 
     }
 
