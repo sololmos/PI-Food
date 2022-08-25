@@ -4,6 +4,7 @@ const initialState = {
     allRecipes : [],
     dietsType : [],
     detail : [],
+    notFoundName : false,
     
 }
 
@@ -20,9 +21,15 @@ function rootReducer(state=initialState, action){
             }
          //--------------------------------------------------
          case 'SEARCH_RECIPE_BY_NAME' :
+            let notFound = action.payload;
+            if(notFound.length === 0){ //revisarrrrrr si 0 o 1!
+                notFound = true;
+            } else{notFound = false}
+
              return{
                  ...state,
-                 recipes: action.payload //las recetas por nombre
+                 recipes: action.payload, //las recetas por nombre
+                    notFoundName : notFound,
              }
          
          //--------------------------------------------------

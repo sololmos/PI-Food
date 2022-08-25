@@ -7,6 +7,9 @@ import styles from "../styles/Home.module.css";
 import SearchBar from './SearchBar';
 import { Link } from "react-router-dom";
 import Card from "./Card";
+
+import NotFoundName from './NotFoundName';
+
 import Loading from "./Loading"
 import Paginado from './Paginado';
 
@@ -18,6 +21,7 @@ export default function Home (){
     const allRecipes = useSelector((state)=> state.recipes)
     // eslint-disable-next-line
     const [orden, setOrden] = useState('')
+    const notFoundName= useSelector((state)=> state.NotFoundName);
 
 //-------------------------------------PAGINADO
                 const [currentPage, setCurrentPage] = useState(1)
@@ -67,9 +71,9 @@ export default function Home (){
 //----------------------------------------------ACA RENDERIZO
  return(
     <div className={styles.padre}>
-
-        <h1 className={styles.title}>FOOD APP</h1>
-
+                <Link className={styles.link_home}  to='/'>
+                <h1 className={styles.title}>FOOD APP</h1>
+                </Link>
             <div className={styles.div}>
 
               {/*   <h1 className={styles.title}>FOOD APP</h1> */}
@@ -167,7 +171,10 @@ export default function Home (){
 
                                              <div className={styles.containerfotos}> {/*------------------------------------------MUESTRO FOTOS------------------------------- */}
 
-                                                {currentRecipes.length ?
+                                                { notFoundName === true ? (
+                                                    <NotFoundName></NotFoundName>
+                                                ) :
+                                                  currentRecipes.length ?
                                                     currentRecipes.map(e => {
                                                         return (
                                                             <span className={styles.fotos}>
@@ -180,9 +187,12 @@ export default function Home (){
                                                                 <div className={styles.loader}>                                                                           
                                                                 <Loading> </Loading>
                                                                 </div>
-                                                 }
+                                                                
+                                                 } 
 
                                              </div>
+
+                                             {/* <PruebaC></PruebaC> */}
 
 
 

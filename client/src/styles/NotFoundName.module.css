@@ -1,0 +1,135 @@
+.container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+   
+   
+    /*   background-repeat: no-repeat;
+      height: 1200px;  */
+     /*  height: 500px;
+      width: 900px;
+      background-attachment: fixed;
+      background-position: center center;
+      background-size: cover;
+ */
+
+/*      justify-content: center;
+     align-content: center; */
+ /*     height: 1000px;
+     width: 1000px; */
+/*      max-height: 100vh;
+     min-width: 100vh; */
+}
+
+
+/* ---------------------------------------- */
+/* .foto{
+    border-radius: 20px;
+   margin-top: 20px;
+}
+ */
+.card {
+
+   
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self: flex-start;
+ 
+   
+   /*  margin: 20px; */
+    width: 800px;
+    height: 500px;
+  /*   height: auto; */
+    border-radius: 20px; 
+    
+    background-image: url(./fotoerror.jpg);
+    /* background-size: 600px 450px;  */
+    background-attachment: fixed;
+      background-position: top center;
+      background-size: cover;
+
+/*     background: rgba(0, 0, 0, 0.5); */
+
+    position: relative;
+    padding: 1.8rem;
+    border: 5px solid  rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease-out;
+    overflow: visible;
+   }
+   
+   .card_details {
+   
+   display: flex;
+   flex-flow: column wrap;
+   align-content: center;
+   justify-content: center;
+   
+    height: 100%;
+    gap: .5em;
+   /*  display: grid;
+    place-content: center; */
+   }
+   
+   .card_button{
+    transform: translate(-50%, 125%);
+    width: 60%;
+    border-radius: 2rem;
+    border: none;
+    background-color: #F9B755;
+    color: #fff;
+    font-size: 1rem;
+    padding: .5rem 1rem;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    opacity: 0;
+    transition: 0.3s ease-out;
+    scale: 1.1;
+   }
+   
+   .text_body {
+    font-family: 'Oswald', sans-serif;
+    align-self: center;
+    color: white;
+    letter-spacing: 1px;
+    text-decoration: none;
+    scale: 1.5;
+   }
+
+   .pic{
+    margin: 10px;
+    margin-left: 80px;
+    border-radius: 20px;
+    display: flex;
+    align-self: center;
+   }
+   
+   /*Text*/
+   .text_title {
+    background-color: rgba(0, 0, 0,0.5);
+    width: 150px;
+    align-self: center;
+    color: #F9B755;
+   margin: 10px;
+    font-size: 1.5em;
+    letter-spacing: 1px;
+    scale: 1.8;
+    /* font-weight: bold; */
+   }
+   
+   /*Hover*/
+   .card:hover {
+    border-color: #F9B755;
+    box-shadow: 0 4px 18px 0 rgba(0, 0, 0, 0.25);
+   }
+   
+   .card:hover .card_button {
+    cursor: pointer;
+    transform: translate(-50%, 50%);
+    opacity: 1;
+   }
+
+

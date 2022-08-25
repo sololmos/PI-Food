@@ -5,6 +5,7 @@ import Home from './components/Home';
 import RecipeCreate from './components/RecipeCreate';
 import Loading from './components/Loading';
 import Detail from './components/Detail';
+import NotFoundName from './components/NotFoundName';
 
 function App() {
   return (
@@ -21,6 +22,9 @@ function App() {
         <Route exact path='/recipe' element={<RecipeCreate/>} />
 
         <Route  exact path='/recipes/:id' element={<Detail/>} />
+
+        <Route  exact path='/notfound' element={<NotFoundName/>} />
+        
 
 
 

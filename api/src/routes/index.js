@@ -22,12 +22,15 @@ const getApiInfo = async ()=>{
 //API_KEY_1=cce81d22300243f59df3c3eb0812c37d
 //API_KEY_2=0a4f04877cf54d79ad0b60c59824540c
 //API_KEY_3=decc54ef414f4104bdfef9525fcffc0f
+//API_KEY_4=bcc16ececf664674b822aa98da8ae9cc
 
 const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=cce81d22300243f59df3c3eb0812c37d&addRecipeInformation=true&number=100`);
 
 //const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=0a4f04877cf54d79ad0b60c59824540c&addRecipeInformation=true&number=100`);
 
 //const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=decc54ef414f4104bdfef9525fcffc0f&addRecipeInformation=true&number=100`);
+
+//const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=bcc16ececf664674b822aa98da8ae9cc&addRecipeInformation=true&number=100`);
 
     const apiFood = await apiUrl.data.results.map(el=>{
         return{

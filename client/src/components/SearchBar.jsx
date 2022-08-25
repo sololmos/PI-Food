@@ -8,6 +8,7 @@ import styles from "../styles/SearchBar.module.css";
 export default function SearchBar(){
     const dispatch= useDispatch(); // me traigo el dispatch
     const [name, setName] = useState("")
+    
 
     function handleInputChange(e){
         e.preventDefault()
