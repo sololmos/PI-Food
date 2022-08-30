@@ -22,14 +22,19 @@ function rootReducer(state=initialState, action){
          //--------------------------------------------------
          case 'SEARCH_RECIPE_BY_NAME' :
             let notFound = action.payload;
-            if(notFound.length === 0){ //revisarrrrrr si 0 o 1!
+          
+            if(notFound.length <= 1){ //revisarrrrrr si 0 o 1!
                 notFound = true;
             } else{notFound = false}
 
+
+
              return{
                  ...state,
+                 
                  recipes: action.payload, //las recetas por nombre
-                    notFoundName : notFound,
+                 notFoundName : notFound,
+                    
              }
          
          //--------------------------------------------------
@@ -63,25 +68,6 @@ function rootReducer(state=initialState, action){
                 }
             };
             break;
-         //--------------------------------------------------
-
-        /*  case 'FILTER_BY_TYPEDIETS' :
-             const diets = state.allRecipes
-             const recipeFiltered = action.payload === 'all'
-              ? diets : 
-             diets.filter(recipe=>{
-                 let names = recipe.type_diet.map(t => t.name)
-                 if(names.includes(action.payload)) return recipe
-                 else return null;
-             })
-             return {
-                 ...state,
-                 recipes : recipeFiltered
-
-             };
-
-             break; */
-
          //--------------------------------------------------
          case 'GET_TYPEDIETS' : 
             return{

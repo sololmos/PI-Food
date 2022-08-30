@@ -33,6 +33,15 @@
     transition: 0.5s ease-out;
     overflow: visible;
    }
+
+   .foto{
+    border-radius: 30px  30px 0px 0px;
+    width: 300px;
+    height: 300px;
+
+   
+    overflow:clip;
+   }
    
    .card_details {
    
@@ -65,15 +74,15 @@
     letter-spacing: 1px;
     text-decoration: none;
    }
-
+/* ----------------------------------------------------------------------
    .pic{
     margin: 10px;
     margin-left: 80px;
     border-radius: 20px;
     display: flex;
     align-self: center;
-   }
-   
+   }//////////////////////////////////////////////////////////////////
+    */
    /*Text*/
    .text_title {
     color: #F9B755;
@@ -90,6 +99,8 @@
    }
    
    .card:hover .card_button {
+    margin-left: 5px;
+    scale: 1.1;
     cursor: pointer;
     transform: translate(-50%, 50%);
     opacity: 1;

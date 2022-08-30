@@ -1,7 +1,7 @@
 // eslint-disable-next-line 
 import {useState,useEffect} from  'react';
 import { useDispatch , useSelector } from "react-redux";
-import { getRecipes, filterByTypeDiets, orderByScore,orderByAlphabet} from "../actions";
+import { getRecipes, filterByTypeDiets, orderByScore,orderByAlphabet, searchRecipeByName} from "../actions";
 import styles from "../styles/Home.module.css";
 // eslint-disable-next-line
 import SearchBar from './SearchBar';
@@ -21,8 +21,12 @@ export default function Home (){
     const allRecipes = useSelector((state)=> state.recipes)
     // eslint-disable-next-line
     const [orden, setOrden] = useState('')
-    const notFoundName= useSelector((state)=> state.NotFoundName);
+    //const notFoundName= useSelector((state)=> state.NotFoundName);
+    
 
+//------------------------------------------
+
+const notFound = useSelector((state)=> state.NotFoundName)
 //-------------------------------------PAGINADO
                 const [currentPage, setCurrentPage] = useState(1)
                 // eslint-disable-next-line 
@@ -40,6 +44,8 @@ export default function Home (){
 
     useEffect(()=>{
         dispatch(getRecipes());
+      
+
     },[dispatch])
 //-----------------------------------------------MUESTRO RECETAS
 
@@ -171,8 +177,9 @@ export default function Home (){
 
                                              <div className={styles.containerfotos}> {/*------------------------------------------MUESTRO FOTOS------------------------------- */}
 
-                                                { notFoundName === true ? (
+                                                { notFound === true ? (
                                                     <NotFoundName></NotFoundName>
+
                                                 ) :
                                                   currentRecipes.length ?
                                                     currentRecipes.map(e => {

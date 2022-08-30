@@ -41,6 +41,7 @@ import axios from 'axios';
                             }) 
                             
                 }catch(error){
+                    alert("The recipe does not exist")
                     console.log(error);
                 }
         }

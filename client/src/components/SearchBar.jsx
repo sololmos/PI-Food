@@ -19,6 +19,7 @@ export default function SearchBar(){
     function handleSubmit(e){
         e.preventDefault()
         dispatch(searchRecipeByName(name))//name lo que esta escribiendo el usuario
+        setName("");
     }
 
 
