@@ -5,13 +5,14 @@
 
 }
 /* --------------------------------------------- */
-.title{
-    padding: 50px;
-    font-size: 50px;
-    color: #F9B755;
-}
+
 
  .div{
+        display: flex;
+        flex-flow: column wrap;
+        justify-content: center;
+        /* align-items: center; */
+
     min-height: 100vh;
     margin: 0;
     box-sizing: border-box;
@@ -22,9 +23,69 @@
     background-position: center center;
     background-size: cover;
  }
+
+
+ .title{
+    margin-top: -500px;
+    padding: 10px;
+    font-size: 70px;
+    color: #F9B755;
+    align-self: center;
+}
+
+
+ .about{
+    display: flex;
+    letter-spacing: 2px;
+
+    text-align: center;
+    align-self: center;
+  
+    flex-flow: column wrap;
+    align-content: center;
+    justify-content: center;
+    width: 900px;
+    height: auto;
+    align-self: center;
+    margin-bottom: 50px;
+    
+ 
+  padding: 20px;
+   border-radius: 30px;
+   background: rgba(33, 33, 33, 0.7);
+   box-shadow: 15px 15px 30px rgb(25, 25, 25),
+               -15px -15px 30px rgb(60, 60, 60);
+
+
+
+}
+
+.text{
+
+    align-self:center ;
+    font-family: 'Oswald', sans-serif;
+    color: #F9B755;
+    font-size: medium;
+}
+
+.textsol{
+    margin-top: 10px;
+    font-family: 'Oswald', sans-serif;
+    color: azure;
+   
+}
+
+.iconlinks{
+    cursor: pointer;
+    margin: 10px 10px;
+   
+   /*  scale: 3; */
+}
+
 .container{
-    margin-top: 40px;
-    margin-left: 600px;
+    align-self: center;
+ /*    margin-top: 40px;
+    margin-left: 600px; */
    /*  align-self: center;
     height: 100vh;
     display: flex;
@@ -95,4 +156,8 @@
 
    .link{
     text-decoration: none;
+    
+   }
+   .a{
+    cursor: pointer;
    }
