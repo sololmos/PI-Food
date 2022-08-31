@@ -8,11 +8,9 @@
 
 
  .div{
-        display: flex;
-        flex-flow: column wrap;
-        justify-content: center;
-        /* align-items: center; */
-
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
     min-height: 100vh;
     margin: 0;
     box-sizing: border-box;
@@ -24,7 +22,6 @@
     background-size: cover;
  }
 
-
  .title{
     margin-top: -500px;
     padding: 10px;
@@ -33,14 +30,11 @@
     align-self: center;
 }
 
-
  .about{
     display: flex;
     letter-spacing: 2px;
-
     text-align: center;
     align-self: center;
-  
     flex-flow: column wrap;
     align-content: center;
     justify-content: center;
@@ -48,20 +42,14 @@
     height: auto;
     align-self: center;
     margin-bottom: 50px;
-    
- 
-  padding: 20px;
+    padding: 20px;
    border-radius: 30px;
    background: rgba(33, 33, 33, 0.7);
    box-shadow: 15px 15px 30px rgb(25, 25, 25),
                -15px -15px 30px rgb(60, 60, 60);
-
-
-
 }
 
 .text{
-
     align-self:center ;
     font-family: 'Oswald', sans-serif;
     color: #F9B755;
@@ -78,23 +66,15 @@
 .iconlinks{
     cursor: pointer;
     margin: 10px 10px;
-   
-   /*  scale: 3; */
+ 
 }
 
 .container{
     align-self: center;
- /*    margin-top: 40px;
-    margin-left: 600px; */
-   /*  align-self: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center; */
+
 }
 .cssbuttons_io_button {
     text-decoration: none;
-   
     cursor: pointer;
     background: #F9B755;
     color: white;
