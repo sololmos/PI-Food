@@ -1,8 +1,8 @@
 const { Router } = require('express');
 const axios =  require('axios');
 require('dotenv').config();
-//const { API_KEY } = process.env;
-const { API_KEY_2 } = process.env;
+const { API_KEY } = process.env;
+//const { API_KEY_2 } = process.env;
 //const { API_KEY_3 } = process.env;
 //const { API_KEY_4 } = process.env;
 const {Recipe,Type} = require ('../db');
@@ -19,9 +19,9 @@ const router = Router();
 //INFO---------------------------------
 const getApiInfo = async ()=>{
 
-//const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${API_KEY}&addRecipeInformation=true&number=100`);
+const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${API_KEY}&addRecipeInformation=true&number=100`);
 
- const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${API_KEY_2}&addRecipeInformation=true&number=100`);
+//const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${API_KEY_2}&addRecipeInformation=true&number=100`);
 
 //const apiUrl = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${API_KEY_3}&addRecipeInformation=true&number=100`);
 
@@ -104,9 +104,9 @@ router.get('/recipes/:id', async (req,res)=>{
 router.get('/types', async (req, res)=>{
    
 
-    //const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${API_KEY}&addRecipeInformation=true&number=100`);
+    const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${API_KEY}&addRecipeInformation=true&number=100`);
 
-    const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${API_KEY_2}&addRecipeInformation=true&number=100`);
+    //const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${API_KEY_2}&addRecipeInformation=true&number=100`);
 
     //const apiInfo = await axios.get(`https://api.spoonacular.com/recipes/complexSearch/?apiKey=${API_KEY_3}&addRecipeInformation=true&number=100`);
 
