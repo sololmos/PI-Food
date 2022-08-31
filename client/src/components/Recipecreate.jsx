@@ -30,8 +30,6 @@ function validate(input){
     if(!input.type_diet){errors.type_diet = 'This field is required'}
      
 
-
-
     return errors;
 };
 

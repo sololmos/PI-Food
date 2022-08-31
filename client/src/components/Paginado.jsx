@@ -27,4 +27,3 @@ export default function Paginado ({recipesPerPage, allRecipes, paginado}){
     )
 }
 
-//<a href="/" onClick={()=>paginado(number)}>{number}</a>

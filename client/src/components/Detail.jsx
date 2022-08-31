@@ -9,7 +9,7 @@ import Loading from "./Loading";
 
 
 export default function Detail(){
-    //console.log(props)
+   
     const dispatch = useDispatch()
     const { id } = useParams();
 
@@ -60,8 +60,7 @@ export default function Detail(){
                     <h3 className={styles.text}> {myRecipe[0].type_diet ? myRecipe[0].type_diet +( ", ") : myRecipe[0].types.map(el =>el.name + (',  ')) }</h3>
 
                     <h3 className={styles.title}>Step by step :</h3>
-
-                    <h3 className={styles.text} > {myRecipe[0].stepbystep }</h3>
+                    <h3 className={styles.text} >{myRecipe[0].stepbystep }</h3>
 
                     <h3 className={styles.title}>healthylevel:</h3>
                     <h3 className={styles.text}>{myRecipe[0].healthylevel } </h3> 
@@ -79,3 +78,25 @@ export default function Detail(){
 
 
 }
+
+
+/* <InstructionContainer>
+<h2>Instructions</h2>
+{
+recipeDetails.db_recipe === true ?
+recipeDetails.steps?.map((s, e) => {
+    return <IndividualContainer key={e}>
+    <span key={e}>{e}</span>
+    <p key={s.steps[e]}>{s.steps}</p>
+    </IndividualContainer>                            
+}) :
+recipeDetails.steps ? recipeDetails.steps.map(i => {
+        const final = recipeDetails.steps[0].map(e => {
+            return <IndividualContainer key={e.number}>
+                <span key={e.id}>{e.number} </span>
+                <p key={e.number}>{e.step}</p>
+            </IndividualContainer>
+        })  
+        return final;                     
+}) : <h3>This recipe does not have any particular instructions</h3>}                         
+</InstructionContainer>  */

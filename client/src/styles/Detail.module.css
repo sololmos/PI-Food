@@ -5,35 +5,25 @@
 .padre{
     min-height: 100vh;
     margin: 0;
- /*    box-sizing: border-box; */
     background-image: url(./fotodetail2.jpg);
-  /*   background-repeat: no-repeat; */
-  background-repeat: repeat;
-  /*   height: 1200px;  */
+    background-repeat: repeat;
     height: auto;
     background-attachment: fixed;
     background-position: center center;
     background-size: cover;
     align-items: center;
-
-     display:flex ;
-    /*  align-items: flex-start; */
-     justify-content: center;
-     align-content: center;
-
-     
+    display:flex ;
+    justify-content: center;
+    align-content: center;
 }
 
 .card {
-      align-self: flex-start;
-      margin: 50px;
-      padding: 20px;
-      scale: 0.8;
-
-
+    align-self: flex-start;
+    margin: 50px;
+    padding: 20px;
+    scale: 0.8;
     width: 900px;
     height: auto;
- /*    height: 1000px; */
     background-color: rgba(33, 33, 33, 0.7);
     box-shadow: 15px 15px 30px #191919,
                  -15px -15px 30px #292929;
@@ -41,22 +31,12 @@
                  transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
    }
    
-   .card:hover {
+.card:hover {
     border-bottom-right-radius: 50px;
     border-top-left-radius: 50px;
     transform: scale(1.05);
    }
 
-/* .card{
-    align-self: flex-start;
-   margin: 20px;
-    background: rgba(255, 255, 255, 0.5);
-    height: 800px ;
-    width: 900px;
-    padding: 15px;
-    border-radius: 20px;
-}
- */
 .name{
     padding: 30px;
     font-size: 30px;
@@ -124,13 +104,11 @@
     }
     
     .cssbuttons_io_button_back:hover .icon_back {
-        /* transform: rotate(180deg); */
     text-decoration: none;
     width: calc(100% - 0.6em);
     }
     
     .cssbuttons_io_button_back .icon_back svg {
-        /* transform: rotate(180deg); */
     text-decoration: none;
     width: 1.1em;
     transition: transform 0.3s;
@@ -144,7 +122,6 @@
     }
     
     .cssbuttons_io_button_home:active .icon_back {
-
     text-decoration: none;
     transform: scale(0.95);
     }
@@ -155,13 +132,3 @@
     margin: auto;
     }
 
-/* -----------------------BUTTON--------------------------- */
-/* .li{
-    display: list-item;
-    font-family: 'Oswald', sans-serif;
-    letter-spacing: 1px;
-    text-align: left;
-    list-style-type: disc;
-    list-style-position: inside;
-    text-transform: capitalize;
-} */

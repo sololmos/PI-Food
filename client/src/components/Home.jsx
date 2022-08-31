@@ -1,13 +1,13 @@
 // eslint-disable-next-line 
 import {useState,useEffect} from  'react';
 import { useDispatch , useSelector } from "react-redux";
-import { getRecipes, filterByTypeDiets, orderByScore,orderByAlphabet, searchRecipeByName} from "../actions";
+import { getRecipes, filterByTypeDiets, orderByScore,orderByAlphabet} from "../actions";
 import styles from "../styles/Home.module.css";
 // eslint-disable-next-line
 import SearchBar from './SearchBar';
 import { Link } from "react-router-dom";
 import Card from "./Card";
-import NotFoundName from './NotFoundName';
+//import NotFoundName from './NotFoundName';
 import Loading from "./Loading"
 import Paginado from './Paginado';
 
@@ -18,11 +18,9 @@ export default function Home (){
     const allRecipes = useSelector((state)=> state.recipes)
     // eslint-disable-next-line
     const [orden, setOrden] = useState('')
-    //const notFoundName= useSelector((state)=> state.NotFoundName);
-    
-//------------------------------------------
+  
 
-const notFound = useSelector((state)=> state.NotFoundName)
+//const notFound = useSelector((state)=> state.NotFoundName)
 //-------------------------------------PAGINADO
     const [currentPage, setCurrentPage] = useState(1)
     // eslint-disable-next-line 
@@ -30,6 +28,7 @@ const notFound = useSelector((state)=> state.NotFoundName)
     //const [recipesPerPage]= useState(9)
     const indexOfLastRecipe= currentPage * recipesPerPage //9
     const indexOfFirstRecipe = indexOfLastRecipe - recipesPerPage //0
+
     const currentRecipes= allRecipes.slice(indexOfFirstRecipe, indexOfLastRecipe)
 
     const paginado= (pageNumber)=>{
@@ -71,7 +70,8 @@ const notFound = useSelector((state)=> state.NotFoundName)
                 <Link className={styles.link_home}  to='/'>
                 <h1 className={styles.title}>FOOD APP</h1>
                 </Link>
-            <div className={styles.div}>
+
+     <div className={styles.div}>
           
         <div className={styles.itemrefresh}>
             <button className={styles.cssbuttons_io_button_home} onClick={e => {handleClick(e)}}> Refresh recipes!
@@ -144,11 +144,11 @@ const notFound = useSelector((state)=> state.NotFoundName)
 
             <div className={styles.containerfotos}> 
 
-                    { notFound === true ? (
+                    { /* notFound === true ? (
                         <NotFoundName></NotFoundName>
 
-                    ) :
-                        currentRecipes.length ?
+                    ) : */
+                        currentRecipes.length ? 
                         currentRecipes.map(e => {
                             return (
                                 <span className={styles.fotos}>
@@ -157,7 +157,7 @@ const notFound = useSelector((state)=> state.NotFoundName)
                                     </Link>
                                 </span>
                                     )
-                                }) : 
+                                })  :
                                     <div className={styles.loader}>                                                                           
                                     <Loading> </Loading>
                                     </div>

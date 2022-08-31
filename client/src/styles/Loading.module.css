@@ -1,16 +1,11 @@
 
 .contenedor{
     display: flex;
-   /*  padding: 400px; */
    flex-wrap: column wrap;
     align-items: flex-start;
     justify-content: center;
 }
-/* .title{
-    color: #F9B755;
-    flex-direction: column;
-    text-shadow: black
-} */
+
 .title{
   margin: 10px;
   color: #F9B755;

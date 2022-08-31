@@ -7,19 +7,19 @@ import styles from "../styles/SearchBar.module.css";
 
 export default function SearchBar(){
     const dispatch= useDispatch(); 
-    const [name, setName] = useState("")
+    const [name, setName] = useState(" ")
     
 
     function handleInputChange(e){
-        e.preventDefault()
+        e.preventDefault();
         setName(e.target.value)
         console.log(name)
     }
 
     function handleSubmit(e){
-        e.preventDefault()
+        e.preventDefault();
         dispatch(searchRecipeByName(name))
-        setName("");
+        setName(" ");
     }
 
 

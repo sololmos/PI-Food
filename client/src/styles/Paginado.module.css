@@ -2,28 +2,15 @@
     display: flex;
     flex-wrap: wrap;
     margin: 10 5;
-   /*  margin-top: 20px;
-    margin-bottom: 20px; */
     flex-direction: row;
 }
 .number{
- /*    display: inline;
-    padding-left: 10px;
-    padding-right: 10px; */
     color: white;
     margin: 20px;
     cursor: pointer;
     text-decoration: none;
 }
 
-/* .botonpaginado{
-    background-color: #F9B755;
-    border-radius: 10px;
-    border: none;
-    font-size: 25px;
-    color: white;
-    cursor: pointer;
-} */
 
 /* ------------------------------------------------- */
 .botonpaginado {

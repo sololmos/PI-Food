@@ -1,60 +1,31 @@
 .contenedor{
     min-height: 100vh;
-  
     margin: 0;
     box-sizing: border-box;
     background-image: url(./fotohome.jpg);
-   /*  background-repeat: no-repeat; */
-   /*  height: 1200px;  */
-   height: auto;
-  /*   background-attachment: fixed; */
+    height: auto;
     background-position: center center;
     background-size: cover;
-
     display:flex;
     padding: 50px;
 }
 
-/* .Bigcard{
-    display: flex;
-    margin: auto;
-
-    background: rgba(255, 255, 255, 0.3);
- 
-    height:1040px;
-    width: 400px;
-    border-radius: 20px;
-    justify-content: center;
-
-} */
 
 .Bigcard {
     margin-top: 20px;
-            display: flex;
-            margin: auto;
-            scale: 0.9;
-           
-
-          /*   height:1040px; */
-            height: auto;     /*  el alto se va ajustar a mi contenido */
-            padding: 20px;
-            width: 600px;
-            border-radius: 20px;
-            justify-content: center;
-
-
-   /*  align-self: flex-start;
-    margin: 50px;
-    padding: 20px; */
-
-
-  /* width: 900px;
-  height: 1000px; */
-  background-color: rgba(33, 33, 33, 0.7);
-  box-shadow: 15px 15px 30px #191919,
-               -15px -15px 30px #292929;
-  transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
-               transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
+    display: flex;
+    margin: auto;
+    scale: 0.9;      
+    height: auto; /*  el alto se va ajustar a mi contenido */
+    padding: 20px;
+    width: 600px;
+    border-radius: 20px;
+    justify-content: center;
+    background-color: rgba(33, 33, 33, 0.7);
+    box-shadow: 15px 15px 30px #191919,
+                -15px -15px 30px #292929;
+    transition: border-radius cubic-bezier(0.075, 0.82, 0.165, 1) 1s,
+                transform cubic-bezier(0.075, 0.82, 0.165, 1) 1s;
  }
  
  .Bigcard:hover {
@@ -63,12 +34,8 @@
   transform: scale(1.05);
  }
 
-
-
-
 .card{
-    color: #F9B755;
-/*  background-color: (255 ,255, 255, 0.5); */
+ color: #F9B755;
  border-radius: 40px;
  align-items: center;
 
@@ -87,12 +54,6 @@
 .itemback{
    margin-top: 20px;
    margin-left: 20px;
- 
-   
-/*     margin-top: 30px;
-    margin-bottom: 30px; 
-    margin-left: 50vh; */
-   
 }
 
 .label{
@@ -110,21 +71,17 @@
     width: 300px;
  }
 
-
-
-
  .inputR {
-     cursor: pointer;
-     font-size: medium;
-     height: 30px;
-     border: none;
-     border-radius: 10px;
+    cursor: pointer;
+    font-size: medium;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
     color: #F9B755, #F9B755;
     margin: 2px;
     padding: 5px;
 }
  
-
  .textareasummary{
     border-radius: 15px;
     text-decoration: none;
@@ -132,7 +89,6 @@
     height: 60px;
     width: 350px;
     font-size: large;
-
  }
  .select{
     border-radius: 11px;
@@ -149,7 +105,6 @@
     height: 150px;
     width: 350px;
     font-size: large;
-
  }
 .errormsg{
     color: rgb(104, 0, 0);
@@ -160,7 +115,6 @@
     background-color: rgba(232, 156, 156, 0.5);
     border-radius: 2px;
     
-    
 }
 
 .itemboton{
@@ -168,14 +122,11 @@
  margin-left: 150px;
  margin-top: 60px;
  margin-bottom: 20px;
- 
-    scale: 1.4;
-    box-sizing: content-box;
-
-    
-   
-    align-self: flex-end;
+ scale: 1.4;
+ box-sizing: content-box;
+ align-self: flex-end;
 }
+
 .diets{
     flex-direction: row;
     flex-wrap: wrap;

@@ -41,6 +41,8 @@ import axios from 'axios';
                             }) 
                             
                 }catch(error){
+                     
+
                     alert("The recipe does not exist")
                     console.log(error);
                 }
@@ -97,20 +99,3 @@ import axios from 'axios';
     
     
     
-/* export function getTypeDiets(dispatch){
-    try{
-        return fetch ("http://localhost:3001/types")
-        .then(response=>response.json())
-        .then(data=>{
-            dispatch({
-                type : 'GET_TYPEDIETS',
-                payload : data
-            })
-        })
-    } 
-    catch(e){console.log(e)}
-
-} */
-    
-
- 
