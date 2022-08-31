@@ -63,7 +63,7 @@
 <img alignself=center width=800px src="foodapprecipecreated.jpeg"  alt="landing" />
 
  <br/>
-<h3 align = "center" > View recipe created details</h3>
+<h3 align = "center" >View detail of recipe created </h3>
 <br/> 
 <img alignself=center width=800px src="foodAppdetailrecipecreated.jpeg"  alt="landing" />
 
