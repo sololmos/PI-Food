@@ -132,3 +132,259 @@
     margin: auto;
     }
 
+ /* --RESPONSIVE-------------------------------------- */
+
+ @media screen and (max-width: 760px) {
+    .padre{
+        display:flex ;
+        background-image: url(./fotodetail2.jpg);
+        background-repeat: repeat;
+        flex-flow: column wrap;
+    }
+
+    .card{
+        scale: 0.5;
+        width: 700px;
+        display: flex;
+        align-self: flex-start;
+        flex-flow: column wrap;
+        margin: 10px;
+        margin-left: -30px;
+        margin-top: -240px;
+
+    }
+
+
+    .name{
+        scale: 1;
+        margin: 5px;
+    }
+    
+    .title{
+        scale: 1;
+        margin: 5px;
+        margin-bottom: -20px;
+    }
+    
+    .text{
+        scale: 0.9;
+    }
+    
+    .pic{
+        scale: 0.6 0.9;
+        margin: 5px;
+    
+    }
+
+    .itemback{
+        scale: 0.8;
+        margin-top: 20px;
+        padding: 1px;
+        margin-bottom: -20px;
+
+    }
+
+    .load{
+        scale: 0.8;
+        margin: 50px;
+    }
+    
+
+}
+
+ /* --RESPONSIVE------MOBILE-------------------------------- */
+@media screen and (max-width: 460px) {
+    .padre{
+        display:flex ;
+        background-image: url(./fotodetail2.jpg);
+        background-repeat: repeat;
+        flex-flow: column wrap;
+    }
+
+    .card{
+        scale: 0.5;
+        width: 700px;
+        display: flex;
+        align-self: flex-start;
+        flex-flow: column wrap;
+        margin: 10px;
+        margin-left: -10px;
+        margin-top: -240px;
+
+    }
+
+
+    .name{
+        scale: 1;
+        margin: 2px;
+    }
+    
+    .title{
+        scale: 1.2;
+        margin: 2px;
+        margin-bottom: -10px;
+    }
+    
+    .text{
+        scale: 1;
+        padding: 5px 8px;
+    }
+    
+    .pic{
+        scale: 0.6 0.9;
+        margin: 5px;
+    
+    }
+
+    .itemback{
+        scale: 0.8;
+        margin-top: 20px;
+        padding: 1px;
+        margin-bottom: -20px;
+        margin-left: -10px;
+
+    }
+
+    .load{
+        scale: 0.8;
+        margin: 50px;
+    }
+    
+   
+}
+
+ /* --RESPONSIVE---------super estrecho----------------------------- */
+
+@media screen and (max-width: 360px) {
+    .padre{
+        display:flex ;
+        background-image: url(./fotodetail2.jpg);
+        background-repeat: repeat;
+        flex-flow: column wrap;
+        
+    }
+
+    .card{
+        scale: 0.5;
+        width: 600px;
+        display: flex;
+        align-self: flex-start;
+        flex-flow: column wrap;
+        margin: 10px;
+        margin-left: 10px;
+        margin-top: -250px;
+
+    }
+
+
+    .name{
+        scale: 1.2;
+        margin: 2px;
+    }
+    
+    .title{
+        scale: 1.2;
+        margin: 10px -2px 5px 0px ;
+        
+        
+        
+    }
+    
+    .text{
+        scale: 1.1;
+        margin: 5px;
+        padding: 5px 15px;
+    }
+    
+    .pic{
+        scale: 0.6 0.9;
+        margin: 5px;
+    
+    }
+
+    .itemback{
+        scale: 0.8;
+        margin-top: 20px;
+        padding: 1px;
+        margin-bottom: -20px;
+        margin-left: -10px;
+
+    }
+
+    .load{
+        scale: 0.8;
+        margin: 50px;
+    }
+    
+
+
+}
+
+ /* --RESPONSIVE---------super estrecho----------------------------- */
+@media screen and (max-width: 260px) {
+
+    .padre{
+        display:flex ;
+        background-image: url(./fotodetail2.jpg);
+        background-repeat: repeat;
+        flex-flow: column wrap;
+        
+    }
+
+    .card{
+        scale: 0.5;
+        width: 400px;
+        display: flex;
+        align-self: flex-start;
+        flex-flow: column wrap;
+        margin: 10px;
+        margin-left: 10px;
+        margin-top: -480px;
+
+    }
+
+
+    .name{
+        scale: 1.3;
+        margin: 10px;
+    }
+    
+    .title{
+        scale: 1.4;
+        margin: 20px 0px 10px 0px ;
+        
+        
+        
+    }
+    
+    .text{
+        scale: 1.1;
+        margin: 20px;
+        padding: 5px 15px;
+        margin-bottom: 20px;
+       
+    }
+    
+    .pic{
+        scale: 0.9 1.2;
+        margin: 10px 0px;
+    
+    }
+
+    .itemback{
+        scale: 0.8;
+        margin-top: 20px;
+        padding: 1px;
+        margin-bottom: -20px;
+        margin-left: -10px;
+
+    }
+
+    .load{
+        scale: 0.8;
+        margin: 50px;
+    }
+
+
+
+}

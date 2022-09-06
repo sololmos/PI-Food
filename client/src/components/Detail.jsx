@@ -65,7 +65,7 @@ export default function Detail(){
                     <h3 className={styles.title}>healthylevel:</h3>
                     <h3 className={styles.text}>{myRecipe[0].healthylevel } </h3> 
 
-                </div> :   <p> <Loading></Loading></p>
+                </div> :   <p className={styles.load}> <Loading></Loading></p>
             }
 
 
@@ -80,18 +80,15 @@ export default function Detail(){
 }
 
 
-/* <InstructionContainer>
+/* <Container>
 <h2>Instructions</h2>
 {
-recipeDetails.db_recipe === true ?
+ 
 recipeDetails.steps?.map((s, e) => {
-    return <IndividualContainer key={e}>
-    <span key={e}>{e}</span>
-    <p key={s.steps[e]}>{s.steps}</p>
-    </IndividualContainer>                            
-}) :
+   
 recipeDetails.steps ? recipeDetails.steps.map(i => {
         const final = recipeDetails.steps[0].map(e => {
+            
             return <IndividualContainer key={e.number}>
                 <span key={e.id}>{e.number} </span>
                 <p key={e.number}>{e.step}</p>

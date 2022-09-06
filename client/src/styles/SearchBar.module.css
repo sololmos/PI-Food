@@ -91,3 +91,107 @@
     .link_home{
      text-decoration: none;
     }
+
+
+     /* --RESPONSIVE-------------------------------------- */
+
+ @media screen and (max-width: 760px) {
+ 
+
+}
+
+/* ------------RESPONSIVE---------MOBILE----------------------------- */
+@media screen and (max-width: 460px) {
+
+   .input{
+      border-radius:15px 0px 0px 15px;
+      text-decoration: none;
+      font-size: medium;
+      border: none;
+      height: 40px;
+      width: 200px;
+     
+   }
+
+   .cssbuttons_io_button_home .icon_home {
+      text-decoration: none;
+      background: white;
+      margin-left: 1em;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.2em;
+      width: 2em;
+      border-radius: 0.7em;
+      box-shadow: 0.1em 0.1em 0.6em 0.2em #F9B755; 
+      right : 0.3em;
+      transition : all 0.3s;
+     }
+   
+}
+
+/* ------------RESPONSIVE---------MOBILE----------------------------- */
+
+@media screen and (max-width: 360px) {
+   .input{
+      border-radius:15px 0px 0px 15px;
+      text-decoration: none;
+      font-size: medium;
+      border: none;
+      height: 40px;
+      width: 180px;
+     
+   }
+
+   .cssbuttons_io_button_home .icon_home {
+      text-decoration: none;
+      background: white;
+      margin-left: 1em;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.2em;
+      width: 2em;
+      border-radius: 0.7em;
+      box-shadow: 0.1em 0.1em 0.6em 0.2em #F9B755; 
+      right : 0.3em;
+      transition : all 0.3s;
+     }
+
+}
+
+/* ------------RESPONSIVE---------MOBILE----------------------------- */
+@media screen and (max-width: 260px) {
+
+
+   .input{
+      border-radius:15px 0px 0px 15px;
+      text-decoration: none;
+      font-size: medium;
+      border: none;
+      height: 40px;
+      width: 100px;
+     
+   }
+
+   .cssbuttons_io_button_home .icon_home {
+      text-decoration: none;
+      background: white;
+      margin-left: 1em;
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 2.2em;
+      width: 2em;
+      border-radius: 0.7em;
+      box-shadow: 0.1em 0.1em 0.6em 0.2em #F9B755; 
+      right : 0.3em;
+      transition : all 0.3s;
+     }
+
+
+
+}
