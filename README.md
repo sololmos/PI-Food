@@ -28,6 +28,7 @@
 ### Deploy:
 - Heroku
 - Vercel
+[FoodApp](https://foodapp-orpin.vercel.app/)
 
 ## About the project
 - PERN stack application using [spoonacular](https://spoonacular.com/food-api) API and a local database to display 9 recipes per page. Also you can search recipes by name, filter them by type of diet, order alphabetically and by health score and create your own recipes.
